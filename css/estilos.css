@@ -317,6 +317,14 @@ body {
     animation-delay: 2s;
 }
 
+.decor-4 {
+    right: 12%;
+    bottom: 10%;
+    font-size: 35px;
+    animation-delay: 1.5s;
+}
+
+
 @keyframes floatDecor {
     0%, 100% {
         transform: translateY(0) rotate(0deg);

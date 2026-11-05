@@ -18,15 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         isOpening = true;
 
-        // Iniciar animación del sobre
         loader.classList.add("opening");
 
-        // Ocultar portada
         setTimeout(() => {
 
             loader.classList.add("hide");
 
-            // Llevar al usuario a la invitación
             setTimeout(() => {
 
                 invitation.scrollIntoView({
