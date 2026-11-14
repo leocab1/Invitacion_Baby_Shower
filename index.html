@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baby Shower</title>
+  
+  <!-- Opcional: Asegúrate de tener Bootstrap linkueado en tu <head> si no lo tienes global en tu 'css/estilos.css' -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka:wght@600;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -55,6 +59,7 @@
     </div>
     <br>
 
+    <!-- Tus imágenes de arriba -->
     <div class="chars-top">
       <img src="img/buzz.jpg" alt="Buzz Lightyear" class="buzz">
       <img src="img/woody.jpg" alt="Woody" class="woody">
@@ -82,22 +87,22 @@
     </div>
 
     <div class="dotted-divider-top"></div>
-<div class="info-section">
-  <div class="info-col">
-    <div class="pill-label">lugar:</div>
-
-    <div class="lugar-text">
-      <a href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+Avalon+San+Juan+Cuautlancingo+Puebla"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="location-link">
-        Salón Avalon<br>
-        San Juan<br>
-        Barrio del Alto, 72700<br>
-        San Juan Cuautlancingo, Pue.
-      </a>
-    </div>
-  </div>
+    
+    <div class="info-section">
+      <div class="info-col">
+        <div class="pill-label">lugar:</div>
+        <div class="lugar-text">
+          <a href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+Avalon+San+Juan+Cuautlancingo+Puebla"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="location-link">
+            Salón Avalon<br>
+            San Juan<br>
+            Barrio del Alto, 72700<br>
+            San Juan Cuautlancingo, Pue.
+          </a>
+        </div>
+      </div>
       <div class="info-col">
         <div class="pill-label">fecha y hora:</div>
         <div class="fecha-text">
@@ -106,50 +111,60 @@
         </div>
       </div>
     </div>
-    <br>
 
-    <div class="chars-bottom">
-      <img src="img/fim.png" alt="Slinky, Mr y Mrs Potato Head y Aliens">
+    <!-- SECCIÓN INFERIOR AJUSTADA CON BOOTSTRAP -->
+    <div class="container my-4">
+      <div class="row justify-content-center align-items-center g-3">
+        <div class="col-4 col-md-4 text-center">
+          <img src="img/pirro.png" class="img-fluid chars-bottom-img" alt="Slinky">
+        </div>
+        <div class="col-4 col-md-4 text-center">
+          <img src="img/cara_de_papa.png" class="img-fluid chars-bottom-img" alt="Mr y Mrs Potato Head">
+        </div>
+        <div class="col-4 col-md-4 text-center">
+          <img src="img/alien.png" class="img-fluid chars-bottom-img" alt="Aliens">
+        </div>
+      </div>
     </div>
 
-
     <style>
-        .confirm-link {
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.confirm-link p {
-    color: #2b4c7e;
-    font-size: 10px;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.confirm-link:hover p {
-    color:#2b4c7e;
-    text-decoration: underline;
-}
+      .confirm-link {
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .confirm-link p {
+        color: #2b4c7e;
+        font-size: 10px;
+        font-weight: 700;
+        transition: color 0.3s ease;
+      }
+      .confirm-link:hover p {
+        color: #2b4c7e;
+        text-decoration: underline;
+      }
+      /* Clase para controlar un tamaño grande pero responsivo que no se deforme */
+      .chars-bottom-img {
+        max-width: 320px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
     </style>
 
-    <!-- Footer -->
     <div class="footer-banner">
-  <span class="footer-star">★</span>
-
-  <div class="footer-text">
-    <h2>¡TE ESPERAMOS!</h2>
-
-<a href="https://wa.me/522228752950?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower."
-       target="_blank"
-       rel="noopener noreferrer"
-       class="confirm-link">
-      <p>Confirma tu asistencia aquí 💙</p>
-    </a>
-  </div>
-
-  <span class="footer-star">★</span>
-</div>
+      <span class="footer-star">★</span>
+      <div class="footer-text">
+        <h2>¡TE ESPERAMOS!</h2>
+        <a href="https://wa.me/522228752950?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="confirm-link">
+          <p>Confirma tu asistencia aquí 💙</p>
+        </a>
+      </div>
+      <span class="footer-star">★</span>
+    </div>
   </div>
 </body>
 </html>

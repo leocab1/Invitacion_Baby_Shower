@@ -12,17 +12,18 @@
   overflow-x: hidden;
 }
 
-    .invitation {
-      width: 100%;
-      max-width: 420px;
-      background: linear-gradient(180deg, #74b9eb 0%, #8bc6f0 55%, #9fd1f5 86%, #b38054 86%, #8f5d34 100%);
-      border-radius: 14px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.55);
-      text-align: center;
-      padding: 14px 10px 0;
-    }
+  .invitation {
+  width: 100%;
+  max-width: 420px;
+  min-height: 94vh;        
+  background: linear-gradient(180deg, #74b9eb 0%, #8bc6f0 55%, #9fd1f5 86%, #b38054 86%, #8f5d34 100%);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  text-align: center;
+  padding: 14px 10px 0;
+}
 
     .wood-floor {
       position: absolute;
@@ -310,20 +311,17 @@
     }
 
     
-/* =========================================
-   CORRECCIÓN DE PERSONAJES INFERIORES
-========================================= */
+
 
 .chars-bottom {
+  max-width: 1300px;
     position: relative;
     z-index: 5;
-
     width: 100%;
     height: clamp(65px, 20vw, 105px);
-
+    gap: 25px;
     margin: 5px auto 8px;
     padding: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,7 +333,7 @@
     display: block;
 
     width: 100%;
-    max-width: 340px;
+    max-width: 360px;
     height: 100%;
 
     object-fit: contain;
@@ -503,10 +501,11 @@
    
    .footer-banner {
   background: linear-gradient(180deg, #fdf3d7 0%, #f5e2b8 100%);
-  margin: 0 8px 0;          /* quité el margen de abajo y reduje los lados */
-  padding: 6px 10px;
-  border-radius: 8px 8px 0 0;  /* opcional: para que se vea más pegado abajo */
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.3);
+  margin: 0;                    /* ← sin márgenes */
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 0;             /* ← para que llegue hasta los bordes */
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
   position: relative;
   z-index: 6;
   display: flex;
