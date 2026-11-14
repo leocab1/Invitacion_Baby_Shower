@@ -1,14 +1,16 @@
  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0f172a;
-      padding: 16px;
-      font-family: 'Fredoka', sans-serif;
-    }
+   body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #0f172a;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+    overflow-x: hidden;
+}
 
     .invitation {
       width: 100%;
@@ -127,7 +129,7 @@
     }
     .boy {
       font-family: 'Luckiest Guy', cursive;
-      font-size: 56px;
+    font-size: clamp(38px, 13vw, 56px);
       line-height: 0.9;
       color: #ffde3b;
       -webkit-text-stroke: 3px #1d4e9e;
@@ -156,21 +158,19 @@
       text-shadow: 1px 1px 0 #7a0a0a;
     }
 
-    /* PERSONAJES SUPERIORES (Escalados para que no invadan espacio) */
-    .chars-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      position: relative;
-      z-index: 4;
-      height: 125px;
-      margin-top: -22px;
-      padding: 0 4px;
-    }
-    .chars-top img {
-      object-fit: contain;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.28));
-    }
+   .chars-top {
+    width: 100%;
+    height: clamp(85px, 27vw, 125px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2px;
+}
+   .chars-top img {
+    max-width: 25%;
+    max-height: 100%;
+    object-fit: contain;
+}
     .chars-top .buzz {
       height: 105px;
       transform: translateY(-8px);
@@ -270,18 +270,16 @@
 
     /* INFORMACIÓN (Lugar y Fecha/Hora) */
     .info-section {
-      display: flex;
-      position: relative;
-      z-index: 5;
-      padding: 0 4px 4px;
-    }
-    .info-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0 4px;
-    }
+    display: flex;
+    width: 100%;
+    gap: 0;
+    align-items: stretch;
+}
+   .info-col {
+    flex: 1;
+    min-width: 0;
+    padding: 0 clamp(2px, 1vw, 8px);
+}
     .info-col:first-child {
       border-right: 3.5px dotted #244b7a;
     }
@@ -502,12 +500,16 @@
         max-width: 100%;
     }
 
-    /* Footer */
+   
     .footer-banner {
-        margin: 0 7px 10px;
-        padding: 6px 7px;
-        gap: 5px;
-    }
+    width: calc(100% - 16px);
+    margin: 0 auto 10px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
 
     .footer-text h2 {
         font-size: clamp(13px, 4.5vw, 15.5px);
