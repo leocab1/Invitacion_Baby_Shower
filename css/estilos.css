@@ -1,15 +1,15 @@
  * { margin: 0; padding: 0; box-sizing: border-box; }
 
    body {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background: #0f172a;
-    padding: 0;
-    font-family: 'Fredoka', sans-serif;
-    overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;          /* ← cambia flex-start por center */
+  background: #0f172a;
+  padding: 12px 0;              /* ← agrega un poco de padding */
+  font-family: 'Fredoka', sans-serif;
+  overflow-x: hidden;
 }
 
     .invitation {
@@ -29,7 +29,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 75px;
+      height: 68px;
       background: repeating-linear-gradient(
         0deg,
         #a87449 0px,
@@ -501,14 +501,17 @@
     }
 
    
-    .footer-banner {
-    width: calc(100% - 16px);
-    margin: 0 auto 10px;
-    padding: 6px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
+   .footer-banner {
+  background: linear-gradient(180deg, #fdf3d7 0%, #f5e2b8 100%);
+  margin: 0 8px 0;          /* quité el margen de abajo y reduje los lados */
+  padding: 6px 10px;
+  border-radius: 8px 8px 0 0;  /* opcional: para que se vea más pegado abajo */
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
     .footer-text h2 {
@@ -520,33 +523,34 @@
     }
 }
 
-/* =========================================
-   CELULARES MUY PEQUEÑOS
-========================================= */
 
 @media screen and (max-width: 350px) {
 
     .invitation {
         padding-left: 5px;
         padding-right: 5px;
+        min-height: auto;
     }
 
     .chars-top {
-        height: 90px;
+        height: auto;
+        min-height: 90px;
     }
 
     .chars-bottom {
-        height: 62px;
+        height: auto;
+        min-height: 62px;
     }
 
     .info-col {
         padding: 0 2px;
     }
 
-    .footer-banner {
-        margin-left: 3px;
-        margin-right: 3px;
-    }
+   .footer-banner {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
 }
 
 
